@@ -1,0 +1,15 @@
+.section {
+  width: 100%;
+  max-width: var(--layout-width);
+  margin-inline: auto;
+
+  &_horizontal-indents {
+    padding-inline: 16px;
+  }
+
+  @media (width >= 650px) {
+    &_horizontal-indents {
+      padding-inline: 80px;
+    }
+  }
+}

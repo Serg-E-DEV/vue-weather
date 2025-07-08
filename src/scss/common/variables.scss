@@ -1,0 +1,20 @@
+:root {
+  --layout-width: 992px;
+  --layout-min-width: 300px;
+  --font-main: 'Open Sans', sans-serif;
+  --font-heading-1: 600 24px/1.2 var(--font-main);
+  --font-heading-2: 400 20px/1.2 var(--font-main);
+  --font-body-s: 400 14px/1.2 var(--font-main);
+  --font-body: 400 16px/1.2 var(--font-main);
+  --color-blank: #fff;
+  --color-black: #0d0d0d;
+  --color-grey: #ccc;
+  --color-grey-dark: #666;
+  --color-yellow: #fabc48;
+  --color-text: #121212;
+  --color-bg: #343d4b;
+  --radius: 4px;
+  --radius-l: 6px;
+  --radius-xl: 8px;
+  --transition-duration: 0.3s;
+}

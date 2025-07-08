@@ -1,0 +1,45 @@
+.card {
+  display: grid;
+  grid-template-rows: 140px minmax(148px, 1fr);
+  overflow: hidden;
+  background: var(--color-grey);
+  border-radius: var(--radius-xl);
+
+  &__img-container {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    padding-top: 12px;
+    overflow: hidden;
+
+    &:hover {
+      --card-img-transform: scale(1.05);
+    }
+  }
+
+  &__img {
+    display: block;
+    transition: var(--transition-duration);
+    transform: var(--card-img-transform, none);
+  }
+
+  &__content {
+    display: grid;
+    padding: 12px;
+    background: var(--color-black);
+    row-gap: 16px;
+  }
+
+  &__info {
+    color: var(--color-blank);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    -webkit-line-clamp: 2;
+  }
+
+  &__desc {
+    -webkit-line-clamp: 6;
+  }
+}

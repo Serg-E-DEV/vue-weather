@@ -1,0 +1,179 @@
+{
+  "customSyntax": "postcss-scss",
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "use",
+        "forward",
+        "if",
+        "else",
+        "each",
+        "mixin",
+        "include"
+      ]
+    }],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "Positioning",
+          "emptyLineBefore": "always",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index"
+          ]
+        },
+
+        {
+          "groupName": "Box Model",
+          "emptyLineBefore": "always",
+          "properties": [
+            "display",
+            "flex",
+            "flex-grow",
+            "flex-shrink",
+            "flex-basis",
+            "flex-direction",
+            "flex-wrap",
+            "justify-content",
+            "align-items",
+            "align-content",
+            "gap",
+            "grid",
+            "grid-template",
+            "grid-template-columns",
+            "grid-template-rows",
+            "grid-area",
+            "grid-gap",
+            "grid-column",
+            "grid-row",
+            "float",
+            "clear",
+            "box-sizing",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            "overflow",
+            "overflow-x",
+            "overflow-y"
+          ]
+        },
+
+        {
+          "groupName": "Typography",
+          "emptyLineBefore": "always",
+          "properties": [
+            "font",
+            "font-family",
+            "font-size",
+            "font-style",
+            "font-weight",
+            "font-variant",
+            "line-height",
+            "letter-spacing",
+            "white-space",
+            "text-align",
+            "text-transform",
+            "text-decoration",
+            "text-indent",
+            "vertical-align",
+            "color"
+          ]
+        },
+
+        {
+          "groupName": "Visual",
+          "emptyLineBefore": "always",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "background-size",
+            "background-position",
+            "background-repeat",
+            "box-shadow",
+            "border",
+            "border-width",
+            "border-style",
+            "border-color",
+            "border-radius",
+            "outline",
+            "opacity"
+          ]
+        },
+
+        {
+          "groupName": "Animation",
+          "emptyLineBefore": "always",
+          "properties": [
+            "transition",
+            "transition-delay",
+            "transition-duration",
+            "transition-property",
+            "transition-timing-function",
+            "animation",
+            "animation-name",
+            "animation-duration",
+            "animation-timing-function",
+            "animation-delay",
+            "animation-iteration-count",
+            "animation-direction"
+          ]
+        },
+
+        {
+          "groupName": "Misc",
+          "emptyLineBefore": "always",
+          "properties": [
+            "cursor",
+            "visibility",
+            "pointer-events",
+            "user-select"
+          ]
+        },
+
+        {
+          "groupName": "Performance & Optimization",
+          "emptyLineBefore": "always",
+          "properties": [
+            "will-change",
+            "contain",
+            "content-visibility",
+            "backface-visibility",
+            "transform-style",
+            "perspective",
+            "perspective-origin",
+            "transform",
+            "transform-origin"
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottom",
+        "severity": "warning"
+      }
+    ]
+  }
+}

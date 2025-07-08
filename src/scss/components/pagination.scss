@@ -1,0 +1,30 @@
+.pagination {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &__control {
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+
+  &__pages {
+    color: var(--color-grey-dark);
+  }
+
+  &__page-num {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  @media (width < 650px) {
+    &__control-text {
+      display: none;
+    }
+  }
+}

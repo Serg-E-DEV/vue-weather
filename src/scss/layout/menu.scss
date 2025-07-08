@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    text-decoration: none;
+    color: inherit;
+    column-gap: 8px;
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}

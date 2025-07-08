@@ -1,0 +1,49 @@
+@use 'common/typography' as typography;
+@use 'common/variables';
+@use 'layout/main';
+@use 'layout/page';
+@use 'layout/section';
+@use 'layout/header';
+@use 'layout/logo';
+@use 'layout/menu';
+@use 'components/base-box';
+@use 'components/base-btn';
+@use 'components/btn-reset';
+@use 'components/base-input';
+@use 'components/search';
+@use 'components/sprite-icon';
+@use 'components/line-clamp-style';
+@use 'components/pagination';
+@use 'modules/cards';
+@use 'modules/card';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: var(--layout-min-width);
+  font: var(--font-body);
+  color: var(--color-text);
+}
+
+h1 {
+  margin-bottom: 18px;
+  font: var(--font-heading-1);
+}
+
+h2 {
+  margin-bottom: 32px;
+  font: var(--font-heading-2);
+}
+
+/*
+ breakpoints:
+   576:
+   768:
+   992:
+   1200:
+   1400:
+*/
