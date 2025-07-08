@@ -11,6 +11,15 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',
+            globals: {
+                window: 'readonly',
+                document: 'readonly',
+                console: 'readonly',
+                process: 'readonly',
+                module: 'readonly',
+                require: 'readonly',
+                exports: 'readonly',
+            },
         },
         rules: {
             'vue/multi-word-component-names': 'off',

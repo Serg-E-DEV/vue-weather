@@ -1,22 +1,14 @@
 <script setup>
-const a = 0;
-const b = '<img />';
-const color = 'red';
-// const id = 'blockTest';
-// const isRed = false;
-// const message = 'Строка сообщения';
+import { sprite } from '@/modules/sprite.js';
+
+const iconSun = sprite.svg('main', 'sun', 32, 32);
 </script>
 
 <template>
-    <main>Hello world! {{ a }}, {{ isRed ? 'true' : 'false' }}</main>
-    <div v-html="b"></div>
-    <div :class="color">Цвет</div>
-    <div :class="`color-${color}`">Цвет</div>
-    <div class="section">Секция</div>
+    <div class="section">
+        <span v-html="iconSun"></span>
+        Text
+    </div>
 </template>
 
-<style scoped>
-.red {
-    background: red;
-}
-</style>
+<style scoped></style>

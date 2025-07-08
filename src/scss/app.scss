@@ -1,21 +1,21 @@
 @use 'common/typography' as typography;
 @use 'common/variables';
+@use 'base/reset/reset-btn';
+@use 'base/styles/line-clamp-style';
+@use 'base/base-box';
+@use 'base/base-btn';
+@use 'base/base-input';
+@use 'base/sprite-icon';
+@use 'blocks/pagination';
+@use 'blocks/search';
+@use 'blocks/cards';
+@use 'blocks/card';
 @use 'layout/main';
 @use 'layout/page';
 @use 'layout/section';
 @use 'layout/header';
 @use 'layout/logo';
 @use 'layout/menu';
-@use 'components/base-box';
-@use 'components/base-btn';
-@use 'components/btn-reset';
-@use 'components/base-input';
-@use 'components/search';
-@use 'components/sprite-icon';
-@use 'components/line-clamp-style';
-@use 'components/pagination';
-@use 'modules/cards';
-@use 'modules/card';
 
 * {
   box-sizing: border-box;
