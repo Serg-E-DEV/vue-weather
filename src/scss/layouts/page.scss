@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  padding: 16px;
+  background: var(--color-bg-light);
+
+  &__section {
+    padding-block: 16px;
+  }
+
+  @media (width >= 1200px) {
+    padding: 24px;
+  }
+
+  @media (width >= 1200px) {
+    justify-content: center;
+    align-items: center;
+  }
+}

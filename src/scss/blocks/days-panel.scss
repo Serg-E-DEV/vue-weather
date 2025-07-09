@@ -1,0 +1,54 @@
+@use '@/scss/common/typography' as typography;
+
+.days-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: var(--color-blank);
+  background: var(--color-bg-dark);
+  border-radius: var(--radius-l);
+  row-gap: 68px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    row-gap: 16px;
+  }
+
+  &__info-item {
+    @include typography.main-text(20px, 500);
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+  }
+
+  &__info-title {
+    font-weight: 700;
+  }
+
+  &__day-buttons {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2px;
+  }
+
+  @media (width >= 650px) {
+    padding: 56px 48px;
+    border-radius: var(--radius-xl);
+
+    &__info-item {
+      font-size: 28px;
+    }
+
+    &__day-buttons {
+      flex-direction: row;
+    }
+  }
+
+  @media (width >= 1200px) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

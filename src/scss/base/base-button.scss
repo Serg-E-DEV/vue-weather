@@ -1,0 +1,61 @@
+@use '@/scss/common/typography' as typography;
+
+.base-button {
+  @include typography.main-text(20px, 600);
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  overflow: hidden;
+  font: var(--font-body);
+  color: var(--base-button-color, var(--color-text));
+  background: var(--base-button-background, transparent);
+  border: none;
+  border-radius: var(--radius);
+  transition: background var(--duration);
+  cursor: pointer;
+  column-gap: 8px;
+  padding-inline: 12px;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &_type {
+    &_primary {
+      position: relative;
+
+      --base-button-color: var(--color-blank);
+      --base-button-background: var(--color-gradient-horizontal-blue);
+
+      &::before {
+        position: absolute;
+        background: var(--color-gradient-horizontal-blue-invert);
+        opacity: 0;
+        transition: opacity var(--duration-xl);
+        inset: 0;
+        content: '';
+      }
+    }
+  }
+
+  &__inner {
+    z-index: 1;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    column-gap: inherit;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &_type {
+      &_primary {
+        &:not(:disabled):hover::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

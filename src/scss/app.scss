@@ -1,21 +1,21 @@
 @use 'common/typography' as typography;
 @use 'common/variables';
-@use 'base/reset/reset-btn';
+@use 'base/reset/reset-button';
 @use 'base/styles/line-clamp-style';
 @use 'base/base-box';
-@use 'base/base-btn';
+@use 'base/base-button';
 @use 'base/base-input';
 @use 'base/sprite-icon';
-@use 'blocks/pagination';
-@use 'blocks/search';
-@use 'blocks/cards';
-@use 'blocks/card';
-@use 'layout/main';
-@use 'layout/page';
-@use 'layout/section';
-@use 'layout/header';
-@use 'layout/logo';
-@use 'layout/menu';
+@use 'blocks/day-detail';
+@use 'blocks/days-panel';
+@use 'blocks/day-button';
+@use 'sections/weather-section';
+@use 'layouts/main';
+@use 'layouts/page';
+@use 'layouts/section';
+@use 'layouts/header';
+@use 'layouts/logo';
+@use 'layouts/menu';
 
 * {
   box-sizing: border-box;
@@ -27,16 +27,6 @@ body {
   min-width: var(--layout-min-width);
   font: var(--font-body);
   color: var(--color-text);
-}
-
-h1 {
-  margin-bottom: 18px;
-  font: var(--font-heading-1);
-}
-
-h2 {
-  margin-bottom: 32px;
-  font: var(--font-heading-2);
 }
 
 /*

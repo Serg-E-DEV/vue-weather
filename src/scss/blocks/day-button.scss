@@ -1,0 +1,34 @@
+@use '@/scss/common/typography' as typography;
+
+.day-button {
+  @include typography.main-text(20px, 400);
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  color: var(--day-button-color, var(--color-blank));
+  background: var(--day-button-background, var(--color-bg));
+  border-radius: var(--radius-l);
+
+  &[data-active] {
+    --day-button-color: var(--color-text);
+    --day-button-background: var(--color-blank);
+  }
+
+  &__temperature {
+    font-weight: 700;
+  }
+
+  @media (width >= 650px) {
+    flex-direction: column;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      --day-button-background: var(--color-grey);
+    }
+  }
+}

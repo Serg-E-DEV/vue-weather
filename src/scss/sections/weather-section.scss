@@ -1,0 +1,15 @@
+.weather-section {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media (width >= 1200px) {
+    flex-grow: 0;
+    flex-direction: row;
+
+    &__days-panel {
+      margin-block: var(--radius-xxl);
+    }
+  }
+}

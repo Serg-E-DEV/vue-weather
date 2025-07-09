@@ -4,7 +4,7 @@
   --layout-min-width: 300px;
 
   // FONTS
-  --font-main: 'Open Sans', sans-serif;
+  --font-main: 'Montserrat', sans-serif;
   --font-heading-1: 600 24px/1.2 var(--font-main);
   --font-heading-2: 400 20px/1.2 var(--font-main);
   --font-body-s: 400 14px/1.2 var(--font-main);
@@ -13,20 +13,24 @@
   // COLORS
   --color-blank: #fff;
   --color-black: #0d0d0d;
-  --color-grey: #ccc;
+  --color-grey: #3a434f;
   --color-grey-dark: #666;
   --color-yellow: #fabc48;
   --color-text: #121212;
   --color-bg-light: #343d4b;
-  --color-bg: #222831;
+  --color-bg: #272e37;
   --color-bg-dark: #222831;
-  --gradient-blue: linear-gradient(90.8deg, rgb(144 217 224 / 90%) 0.2%, rgb(84 96 230 / 90%) 100%);
+  --color-gradient-horizontal-blue: linear-gradient(to right, rgb(144 217 224 / 90%) 0%, rgb(84 96 230 / 90%) 100%);
+  --color-gradient-horizontal-blue-invert: linear-gradient(to left, rgb(144 217 224 / 90%) 0%, rgb(84 96 230 / 90%) 100%);
 
   // RADIUSES
-  --radius: 4px;
-  --radius-l: 10px;
-  --radius-xl: 25px;
+  --radius: 8px;
+  --radius-l: 12px;
+  --radius-xl: 24px;
+  --radius-xxl: 36px;
 
   // OTHERS
-  --transition-duration: 0.3s;
+  --duration: 0.3s;
+  --duration-l: 0.6s;
+  --duration-xl: 1s;
 }

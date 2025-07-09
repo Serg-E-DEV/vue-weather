@@ -1,0 +1,92 @@
+@use '@/scss/common/typography' as typography;
+
+.day-detail {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-l);
+
+  &::after {
+    position: absolute;
+    background: linear-gradient(152.19deg, rgb(136 235 239 / 90%) -0.04%, rgb(83 91 230 / 90%) 100%);
+    content: '';
+    inset: 0;
+  }
+
+  &__img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    contain: size;
+    object-fit: cover;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px;
+    color: var(--color-blank);
+    row-gap: 56px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__week-day {
+    @include typography.main-text(30px, 700);
+  }
+
+  &__date {
+    @include typography.main-text(22px, 500);
+  }
+
+  &__location {
+    @include typography.main-text(20px, 600);
+
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__temperature {
+    @include typography.main-text(50px, 700);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__status {
+    @include typography.main-text(30px, 700);
+  }
+
+  @media (width >= 650px) {
+    border-radius: var(--radius-xl);
+
+    &__inner {
+      padding: 48px 32px 84px;
+    }
+
+    &__week-day {
+      font-size: 37px;
+    }
+  }
+
+  @media (width >= 1200px) {
+    width: 492px;
+    min-height: 664px;
+  }
+}
