@@ -1,23 +1,22 @@
 {
   "customSyntax": "postcss-scss",
-  "extends": [
-    "stylelint-config-standard"
-  ],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "at-rule-no-unknown": [true, {
-      "ignoreAtRules": [
-        "use",
-        "forward",
-        "if",
-        "else",
-        "each",
-        "mixin",
-        "include"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "use",
+          "forward",
+          "if",
+          "else",
+          "each",
+          "mixin",
+          "include"
+        ]
+      }
+    ],
     "order/properties-order": [
       [
         {
@@ -25,6 +24,7 @@
           "emptyLineBefore": "always",
           "properties": [
             "position",
+            "inset",
             "top",
             "right",
             "bottom",
@@ -34,30 +34,28 @@
         },
 
         {
-          "groupName": "Box Model",
+          "groupName": "Layout",
           "emptyLineBefore": "always",
           "properties": [
-            "display",
+            "grid-area",
+            "align-self",
+            "place-self",
+            "justify-self",
             "flex",
             "flex-grow",
             "flex-shrink",
             "flex-basis",
-            "flex-direction",
-            "flex-wrap",
-            "justify-content",
-            "align-items",
-            "align-content",
-            "gap",
             "grid",
-            "grid-template",
-            "grid-template-columns",
-            "grid-template-rows",
-            "grid-area",
-            "grid-gap",
-            "grid-column",
             "grid-row",
-            "float",
-            "clear",
+            "grid-column"
+          ]
+        },
+
+        {
+          "groupName": "Box Model",
+          "emptyLineBefore": "always",
+          "properties": [
+            "content",
             "box-sizing",
             "width",
             "min-width",
@@ -70,11 +68,31 @@
             "margin-right",
             "margin-bottom",
             "margin-left",
+            "margin-inline",
+            "margin-block",
             "padding",
             "padding-top",
             "padding-right",
             "padding-bottom",
             "padding-left",
+            "padding-inline",
+            "padding-block",
+            "display",
+            "flex-direction",
+            "flex-wrap",
+            "justify-content",
+            "align-items",
+            "align-content",
+            "gap",
+            "column-gap",
+            "row-gap",
+            "grid-template",
+            "grid-template-columns",
+            "grid-template-rows",
+            "grid-gap",
+            "grid-row",
+            "float",
+            "clear",
             "overflow",
             "overflow-x",
             "overflow-y"

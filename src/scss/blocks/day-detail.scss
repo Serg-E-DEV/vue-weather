@@ -7,16 +7,20 @@
 
   &::after {
     position: absolute;
-    background: linear-gradient(152.19deg, rgb(136 235 239 / 90%) -0.04%, rgb(83 91 230 / 90%) 100%);
-    content: '';
     inset: 0;
+    content: '';
+    background: linear-gradient(
+      152.19deg,
+      rgb(136 235 239 / 90%) -0.04%,
+      rgb(83 91 230 / 90%) 100%
+    );
   }
 
   &__img {
     position: absolute;
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
     contain: size;
     object-fit: cover;
   }
@@ -24,13 +28,13 @@
   &__inner {
     position: relative;
     z-index: 1;
+    height: 100%;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    padding: 24px;
-    color: var(--color-blank);
     row-gap: 56px;
+    color: var(--color-blank);
   }
 
   &__header {

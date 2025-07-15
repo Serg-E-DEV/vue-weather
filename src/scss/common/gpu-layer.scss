@@ -1,0 +1,10 @@
+/*
+* @use '@/scss/mixins/gpu-layer' as *;
+* transform-style: preserve-3d; // TODO: to place on card container
+* @include gpu-layer; // TODO: to place on inner elements
+*/
+@mixin gpu-layer {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}

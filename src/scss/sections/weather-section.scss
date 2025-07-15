@@ -1,6 +1,6 @@
 .weather-section {
-  display: flex;
   flex-grow: 1;
+  display: flex;
   flex-direction: column;
   row-gap: 16px;
 
@@ -9,6 +9,7 @@
     flex-direction: row;
 
     &__days-panel {
+      min-width: 540px;
       margin-block: var(--radius-xxl);
     }
   }

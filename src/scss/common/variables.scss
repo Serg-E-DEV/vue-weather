@@ -4,11 +4,11 @@
   --layout-min-width: 300px;
 
   // FONTS
-  --font-main: 'Montserrat', sans-serif;
-  --font-heading-1: 600 24px/1.2 var(--font-main);
-  --font-heading-2: 400 20px/1.2 var(--font-main);
-  --font-body-s: 400 14px/1.2 var(--font-main);
-  --font-body: 400 16px/1.2 var(--font-main);
+  --font-family: 'Montserrat', sans-serif;
+  --font-heading-1: 600 24px/1.2 var(--font-family);
+  --font-heading-2: 400 20px/1.2 var(--font-family);
+  --font-body-s: 400 14px/1.2 var(--font-family);
+  --font-body: 400 16px/1.2 var(--font-family);
 
   // COLORS
   --color-blank: #fff;
@@ -20,8 +20,16 @@
   --color-bg-light: #343d4b;
   --color-bg: #272e37;
   --color-bg-dark: #222831;
-  --color-gradient-horizontal-blue: linear-gradient(to right, rgb(144 217 224 / 90%) 0%, rgb(84 96 230 / 90%) 100%);
-  --color-gradient-horizontal-blue-invert: linear-gradient(to left, rgb(144 217 224 / 90%) 0%, rgb(84 96 230 / 90%) 100%);
+  --color-gradient-horizontal-blue: linear-gradient(
+    to right,
+    rgb(144 217 224 / 90%) 0%,
+    rgb(84 96 230 / 90%) 100%
+  );
+  --color-gradient-horizontal-blue-invert: linear-gradient(
+    to left,
+    rgb(144 217 224 / 90%) 0%,
+    rgb(84 96 230 / 90%) 100%
+  );
 
   // RADIUSES
   --radius: 8px;

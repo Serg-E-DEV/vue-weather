@@ -5,12 +5,12 @@
   gap: 16px 24px;
 
   &__link {
+    width: max-content;
     display: flex;
     align-items: center;
-    width: max-content;
+    column-gap: 8px;
     text-decoration: none;
     color: inherit;
-    column-gap: 8px;
 
     &_bold {
       font-weight: 700;

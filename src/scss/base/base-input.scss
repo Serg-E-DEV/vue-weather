@@ -1,9 +1,14 @@
+@use '@/scss/common/typography' as typography;
+
 .base-input {
+  @include typography.main-text(18px, 400);
+
   min-width: 180px;
   min-height: 52px;
-  font: inherit;
-  background: var(--color-grey);
+  padding-inline: 16px;
+  font-family: inherit;
+  color: var(--color-blank);
+  background: var(--color-bg);
   border: none;
   border-radius: var(--radius);
-  padding-inline: 12px;
 }

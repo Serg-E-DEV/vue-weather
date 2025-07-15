@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="80" height="80" fill="currentColor" version="1.1" viewBox="0 0 32 32">
+  <g id="SVGRepo_iconCarrier">
+    <style>
+      .st0{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+    </style>
+    <path d="M25.3 19.43A8.954 8.954 0 0 0 28 13a9 9 0 0 0-9-9c-4.28 0-7.86 2.99-8.77 7H9.5C6.48 11 4 13.47 4 16.5c0 1.75.82 3.31 2.1 4.32M16 17.79v4.25" class="st0"/>
+    <path d="m17.7 16.09-1.7 1.7-1.7-1.7M12.32 19.91 16 22.04M11.7 17.59l.62 2.32-2.32.62M12.32 24.16 16 22.04M10 23.54l2.32.62-.62 2.32M16 26.28v-4.24M14.3 27.98l1.7-1.7 1.7 1.7M19.68 24.16 16 22.04M20.3 26.48l-.62-2.32 2.32-.62M19.68 19.91 16 22.04M22 20.53l-2.32-.62.62-2.32" class="st0"/>
+  </g>
+</svg>

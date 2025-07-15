@@ -1,0 +1,13 @@
+@use '@/scss/common/typography' as typography;
+
+.day-stat {
+  @include typography.main-text(20px, 500);
+
+  display: flex;
+  justify-content: space-between;
+  column-gap: 32px;
+
+  &__title {
+    font-weight: 600;
+  }
+}

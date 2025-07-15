@@ -1,0 +1,17 @@
+.city-changer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__button {
+    flex-grow: 1;
+  }
+
+  &__input {
+    flex-grow: 1;
+  }
+
+  @media (width >= 650px) {
+    flex-direction: row;
+  }
+}
