@@ -1,5 +1,5 @@
 <script setup>
-const model = defineModel({ type: String, required: true, default: 'null' });
+const model = defineModel({ type: String, required: true, default: '' });
 </script>
 
 <template>

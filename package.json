@@ -14,7 +14,8 @@
     "lint:stylelint": "stylelint \"src/**/*.{scss,css}\" --fix"
   },
   "dependencies": {
-    "vue": "^3.5.17"
+    "vue": "^3.5.17",
+    "vue-i18n": "^11.1.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

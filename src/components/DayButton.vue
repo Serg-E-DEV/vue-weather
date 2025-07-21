@@ -1,5 +1,6 @@
 <script setup>
 import { sprite } from '@/modules/sprite.js';
+import { computed } from 'vue';
 const props = defineProps({
   active: {
     type: Boolean,
@@ -15,17 +16,16 @@ const props = defineProps({
   },
 });
 
-const { icon, weekdayShort, temperature } = props.dayData;
-const isActive = props.active;
+const isActive = computed(() => String(props.active));
 
-const iconElement = sprite.svg('main', icon, 56, 56);
+const iconElement = sprite.svg('main', props.dayData.icon, 56, 56);
 </script>
 
 <template>
-  <button class="reset-button day-button" :data-active="String(isActive)">
+  <button type="button" class="reset-button day-button" :data-active="isActive">
     <span v-html="iconElement"></span>
-    <span>{{ weekdayShort }}</span>
-    <span class="day-button__temperature">{{ temperature }}</span>
+    <span>{{ props.dayData.weekdayShort }}</span>
+    <span class="day-button__temperature">{{ props.dayData.temperature }}</span>
   </button>
 </template>
 

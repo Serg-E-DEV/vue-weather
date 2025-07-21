@@ -27,7 +27,7 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    &:not([data-active]):hover {
+    &:not([data-active='true']):hover {
       --day-button-background: var(--color-grey);
     }
   }

@@ -10,4 +10,8 @@
   &__title {
     font-weight: 600;
   }
+
+  &__value {
+    min-width: max-content;
+  }
 }

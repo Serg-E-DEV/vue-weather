@@ -1,4 +1,4 @@
-export async function getCity(cityName) {
+export async function getCity(cityName, local) {
   const API_KEY = '8d81bba310e447148df93623251607';
   const API_BASE_URL = 'https://api.weatherapi.com';
   const API_FORECAST_ENDPOINT = '/v1/forecast.json';
@@ -6,7 +6,7 @@ export async function getCity(cityName) {
   const apiParams = new URLSearchParams({
     key: API_KEY,
     q: cityName,
-    lang: 'en',
+    lang: local,
     days: 4,
     hour: 25,
   });

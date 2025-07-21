@@ -1,5 +1,37 @@
-# Vue 3 + Vite
+# Weather Forecast App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A reactive **SPA** built with **Vue.js 3.3+**, offering a clean and multilingual weather forecast interface with full support for async updates and daily forecast switching.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## Features
+
+- **Multilingual UI** (English / Russian) with easy translation extension
+- **Detailed daily forecast** with navigation between days
+- **Reactive UI updates** without page reload
+- **Asynchronous data fetching** from WeatherAPI
+- **Responsive design** for mobile and desktop
+
+---
+
+## Tech Stack
+
+- [Vue 3.3+](https://vuejs.org/)
+- [vue-i18n](https://vue-i18n.intlify.dev/)
+- SCSS (modular styling)
+- Weather API from [weatherapi.com](https://www.weatherapi.com/)
+
+---
+
+## 📦 Project Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Serg-E-DEV/vue-weather.git
+cd vue-weather
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev

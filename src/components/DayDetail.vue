@@ -1,10 +1,11 @@
 <script setup>
 import { sprite } from '@/modules/sprite.js';
 import { computed } from 'vue';
+
 const props = defineProps({
   dayImagePath: {
     type: String,
-    default: () => '/images/day-detail.jpg',
+    default: () => './images/day-detail.jpg',
   },
   currentDayData: {
     type: Object,
@@ -16,12 +17,13 @@ const props = defineProps({
       icon: 'default',
       city: '-',
       country: '-',
+      code: 0,
     }),
   },
 });
 const dayImagePath = props.dayImagePath;
-const geoIcon = sprite.svg('main', 'geo', 28, 28);
-const detailIcon = computed(() =>
+const iconGeo = sprite.svg('main', 'geo', 28, 28);
+const iconDetail = computed(() =>
   sprite.svg('main', props.currentDayData.icon, 96, 96)
 );
 </script>
@@ -45,14 +47,14 @@ const detailIcon = computed(() =>
           {{ props.currentDayData.dateFormatted }}
         </div>
         <div class="day-detail__location">
-          <span v-html="geoIcon"></span>
+          <span v-html="iconGeo"></span>
           {{ props.currentDayData.city }}, {{ props.currentDayData.country }}
         </div>
       </div>
 
       <div class="day-detail__content">
         <div class="day-detail__temperature">
-          <span v-html="detailIcon"></span>
+          <span v-html="iconDetail"></span>
           {{ props.currentDayData.temperature }}
         </div>
         <div class="day-detail__status">

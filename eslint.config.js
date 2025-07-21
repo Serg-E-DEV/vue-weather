@@ -3,6 +3,9 @@ import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 
 export default [
+  {
+    ignores: ['dist/**/*'],
+  },
   js.configs.recommended,
   ...vue.configs['flat/recommended'],
   prettier,
@@ -22,7 +25,6 @@ export default [
         URLSearchParams: 'readonly',
         fetch: 'readonly',
         setTimeout: 'readonly',
-
       },
     },
     rules: {

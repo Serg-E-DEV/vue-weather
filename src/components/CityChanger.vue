@@ -1,26 +1,23 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { inject, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { sprite } from '@/modules/sprite.js';
 import BaseButton from '@/components/BaseButton.vue';
 import BaseInput from '@/components/BaseInput.vue';
 
+import { CITY_NAME } from '@/modules/symbols.js';
+
+const { t } = useI18n();
 const icon = sprite.svg('main', 'geo', 28, 28);
 
-const emit = defineEmits({
-  changeCity: null,
-});
-
 const isEditing = ref(false);
-const cityName = ref('London');
+const cityName = inject(CITY_NAME);
+const inputValue = ref(cityName.value);
 
-function changeCity() {
-  emit('changeCity', cityName.value);
+function saveCity() {
+  cityName.value = inputValue.value;
   isEditing.value = false;
 }
-
-onMounted(() => {
-  emit('changeCity', cityName.value);
-});
 </script>
 
 <template>
@@ -32,26 +29,27 @@ onMounted(() => {
       @click="isEditing = true"
     >
       <span v-html="icon"></span>
-      Change city
+      {{ t('changeCity') }}
     </BaseButton>
 
     <template v-else>
       <BaseInput
-        v-model="cityName"
-        type="text"
+        v-model="inputValue"
+        v-focus
+        type="search"
         name="city-name"
-        placeholder="Введите город"
+        :placeholder="t('enterCity')"
         class="city-changer__input"
-        @keyup.enter="changeCity()"
+        @keyup.enter="saveCity"
         @keyup.esc="isEditing = false"
       />
 
       <BaseButton
         theme="primary"
         class="city-changer__button"
-        @click="changeCity()"
+        @click="saveCity()"
       >
-        Save
+        {{ t('save') }}
       </BaseButton>
     </template>
   </div>
